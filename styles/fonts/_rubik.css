@@ -1,0 +1,19 @@
+/* NOTE: In favor to use local fonts instead of fetching */
+
+@font-face {
+    font-family: "Medium";
+    src: url("../../../public/fonts/Rubik/static/Rubik-Medium.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Black";
+    src: url("../../../public/fonts/Rubik/static/Rubik-Black.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Regular";
+    src: url("../../../public/fonts/Rubik/static/Rubik-Regular.ttf") format("truetype");
+    font-display: swap;
+}

@@ -1,0 +1,25 @@
+/* NOTE: In favor to use local fonts instead of fetching */
+
+@font-face {
+    font-family: "Bold";
+    src: url("../../../public/fonts/Montserrat/static/Montserrat-Bold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ExtraBold";
+    src: url("../../../public/fonts/Montserrat/static/Montserrat-ExtraBold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Light";
+    src: url("../../../public/fonts/Montserrat/static/Montserrat-Light.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Regular";
+    src: url("../../../public/fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
+    font-display: swap;
+}

@@ -1,0 +1,78 @@
+/* NOTE: Capa 1 - Primitivos (Primitive / Global / Reference)
+   Solo valores crudos: color, tipografia y sombra.
+   Sin referencias a semantica ni a componentes.
+   Cambiar este archivo cambia la marca. */
+
+@layer base {
+  :root {
+
+    /* Color - marca (paleta original del sitio) */
+
+    --color-blue-500:   #046bd2;
+    --color-blue-700:   #045cb4;
+    --color-blue-900:   #02356b;
+    --color-orange-500: #ff8200;
+    --color-teal-500:   #34c2c6;
+    --color-sky-300:    #6ec1e4;
+
+    /* Color - neutros */
+
+    --color-white:   #ffffff;
+    --color-cream:   #f5f3e6;
+    --color-gray-50: #f9f9f9;
+    --color-gray-100: #f4f4f4;
+    --color-gray-150: #f3f3f1;
+    --color-gray-200: #ececec;
+    --color-gray-300: #d8e4eb;
+    --color-gray-500: #96959e;
+    --color-gray-700: #54595f;
+    --color-gray-850: #2b2f38;
+    --color-gray-900: #212625;
+    --color-gray-950: #141414;
+    --color-black:   #000000;
+
+    /* Color - alphas */
+
+    --color-white-a04: rgb(255 255 255 / 4%);
+    --color-white-a10: rgb(255 255 255 / 10%);
+    --color-white-a45: rgb(255 255 255 / 45%);
+    --color-black-a10: rgb(0 0 0 / 10%);
+    --color-black-a40: rgb(0 0 0 / 40%);
+    --color-blue-500-a10: rgb(4 107 210 / 10%);
+    --color-blue-500-a18: rgb(4 107 210 / 18%);
+
+    /* Tipografia - familias (@font-face del proyecto) */
+
+    --font-regular:  "Regular";
+    --font-medium:   "Medium";
+    --font-bold:     "Bold";
+    --font-extrabold: "ExtraBold";
+
+    /* Tipografia - tamanos */
+
+    --text-10: 10px;
+    --text-12: 12px;
+    --text-13: 13px;
+    --text-14: 14px;
+    --text-15: 15px;
+    --text-16: 16px;
+    --text-20: 20px;
+    --text-22: 22px;
+
+    /* Tipografia - peso, tracking, interlineado */
+
+    --weight-500: 500;
+    --weight-600: 600;
+    --tracking-wide:   1px;
+    --tracking-wider:  3px;
+    --tracking-widest: 5px;
+    --leading-hero: 1.45;
+
+    /* Sombras */
+
+    --shadow-card-raw:  0 12px 80px rgb(41 30 113 / 12%);
+    --shadow-float-raw: 0 24px 60px rgb(31 41 55 / 12%);
+    --shadow-glow-raw:  0 0 8px rgb(255 255 255 / 10%);
+    --shadow-none: none;
+  }
+}

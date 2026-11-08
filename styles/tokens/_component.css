@@ -1,0 +1,65 @@
+/* NOTE: Capa 3 - Componente
+   Uso especifico de un widget. Apunta a la capa 2.
+   Cambiar este archivo cambia un componente. */
+
+@layer base {
+  :root {
+
+    /* Card del login */
+
+    --card-width: var(--size-800);
+    --card-height: var(--size-520);
+    --card-radius: var(--radius-card);
+    --card-bg: var(--color-surface);
+    --card-shadow: var(--shadow-card);
+
+    /* Hero (panel de marca) */
+
+    --hero-bg: var(--color-accent);
+    --hero-text: var(--color-accent-text);
+    --hero-label-border: var(--color-accent-text);
+    --hero-label-bg: var(--color-surface-translucent);
+    --hero-label-hover-bg: var(--color-surface-subtle);
+    --hero-label-hover-text: var(--color-text);
+
+    /* Formulario del login */
+
+    --form-bg: var(--color-surface-raised);
+
+    /* Boton */
+
+    --button-bg: var(--color-action);
+    --button-text: var(--color-action-text);
+    --button-radius: var(--radius-control);
+    --button-width: var(--size-160);
+
+    /* Input */
+
+    --input-bg: var(--color-surface-input);
+    --input-radius: var(--radius-control);
+    --input-border: var(--color-border);
+    --input-placeholder: var(--color-text-muted);
+
+    /* Checkbox "Remember me" */
+
+    --checkbox-bg: var(--color-action);
+    --checkbox-check-color: var(--color-action-text);
+    --remember-row-height: var(--size-62);
+
+    /* Header de la app */
+
+    --header-bg: var(--color-surface-inverse);
+    --header-text: var(--color-text-on-inverse);
+
+    /* Form card (global.css) */
+
+    --form-card-width: var(--size-500);
+    --form-card-bg: var(--color-surface-raised);
+    --form-card-radius: var(--radius-surface);
+    --form-button-bg: var(--color-action);
+    --form-button-text: var(--color-action-text);
+    --form-button-shadow: var(--shadow-glow);
+    --input-block-bg: var(--color-surface-input);
+    --input-block-radius: var(--radius-surface);
+  }
+}

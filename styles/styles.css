@@ -1,0 +1,335 @@
+@import url(./tokens/_primitives.css);
+@import url(./tokens/_spacing.css);
+@import url(./tokens/_radius.css);
+@import url(./tokens/_semantic.css);
+@import url(./tokens/_component.css);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  /* font-family: "Poppins", sans-serif; */
+}
+
+html, body, #root { height: 100%; width: 100%; }
+
+.card {
+  position: relative;
+  overflow: hidden;
+  width: var(--card-width);
+  height: var(--card-height);
+  border-radius: var(--card-radius);
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+.toggle {
+  display: none;
+}
+
+.card-bg {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--pct-half);
+  border-radius: var(--card-radius);
+  background: var(--hero-bg);
+  translate: 100% 0;
+  transition: 0.45s ease-in-out;
+}
+
+.toggle:checked ~ .card-bg {
+  translate: 0 0;
+}
+
+.hero,
+.form {
+  position: absolute;
+  width: var(--pct-half);
+  height: var(--pct-full);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.45s ease-in-out;
+}
+
+.hero.login,
+.form.login {
+  opacity: 1;
+  visibility: visible;
+}
+
+.toggle:checked ~ :is(.hero, .form).login {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.toggle:checked ~ :is(.hero, .form).register {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero.login {
+  left: var(--pct-half);
+  translate: 0;
+}
+
+.toggle:checked ~ .hero.login {
+  translate: 100% 0;
+}
+
+.hero.register {
+  translate: -100% 0;
+}
+
+.toggle:checked ~ .hero.register {
+  translate: 0;
+}
+
+.form.login {
+  translate: 0;
+}
+
+.toggle:checked ~ .form.login {
+  translate: 100% 0;
+}
+
+.form.register {
+  left: var(--pct-half);
+  translate: -100% 0;
+}
+
+.toggle:checked ~ .form.register {
+  translate: 0;
+}
+
+.hero {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-hero-gap);
+  color: var(--hero-text);
+  text-align: center;
+  padding: 0 var(--spacing-hero-px);
+}
+
+.card h2 {
+  margin: 0;
+  font-weight: var(--font-weight-medium);
+}
+
+.hero p {
+  margin: 0 0 var(--spacing-hero-text-mb);
+  opacity: 0.95;
+  line-height: var(--line-height-hero);
+}
+
+.hero label {
+  padding: var(--spacing-hero-label-py) var(--spacing-hero-label-px);
+  border-radius: var(--radius-control);
+  letter-spacing: var(--letter-spacing-wide);
+  font-family: inherit;
+  font-size: var(--font-size-body);
+  color: inherit;
+  border: var(--border-width-thin) solid var(--hero-label-border);
+  background: var(--hero-label-bg);
+  backdrop-filter: blur(var(--space-1));
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.hero label:hover {
+  color: var(--hero-label-hover-text);
+  background: var(--hero-label-hover-bg);
+}
+
+.form {
+  background: var(--form-bg);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-form-gap);
+  padding: var(--spacing-form-p);
+}
+
+.form h2 {
+  font-size: var(--font-size-heading);
+  text-align: center;
+  margin-bottom: var(--spacing-form-title-mb);
+}
+
+.or {
+  position: relative;
+  text-align: center;
+  height: var(--space-6);
+  font-weight: var(--font-weight-medium);
+  opacity: 0.5;
+}
+
+.or::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 0;
+  width: var(--pct-full);
+  translate: 0 -50%;
+  height: var(--size-1);
+  background: var(--color-overlay);
+  opacity: 0.6;
+}
+
+.or::after {
+  content: "Or";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 1;
+  background: var(--color-surface-raised);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  padding: 0 var(--space-3);
+}
+
+.socials {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-10);
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  background: transparent;
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-control);
+  padding: var(--space-2) var(--size-14);
+  cursor: pointer;
+}
+
+.social-btn > img {
+  height: var(--space-6);
+}
+
+.social-btn:first-child > img {
+  height: var(--space-5);
+}
+
+.social-btn > p {
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-fields-gap);
+  width: var(--pct-full);
+}
+
+.form label {
+  font-size: var(--font-size-sm);
+  opacity: 0.5;
+}
+
+.form p {
+  margin: 0;
+  text-align: center;
+  opacity: 0.5;
+  font-size: var(--font-size-sm);
+}
+
+input,
+button {
+  height: var(--control-height);
+}
+
+.form input {
+  font-family: inherit;
+  border-radius: var(--input-radius);
+  background: var(--input-bg);
+  border: var(--border-width-thin) solid var(--input-border);
+  padding: var(--control-padding-y) var(--control-padding-x);
+  color: inherit;
+  width: var(--pct-full);
+}
+
+.form input::placeholder {
+  color: var(--input-placeholder);
+}
+
+.form button {
+  border: 0;
+  border-radius: var(--button-radius);
+  padding: var(--control-padding-y) 0;
+  font-family: inherit;
+  letter-spacing: var(--letter-spacing-wide);
+  color: inherit;
+  width: var(--button-width);
+  cursor: pointer;
+}
+
+.form button[type="submit"] {
+  background: var(--button-bg);
+  color: var(--button-text);
+  width: var(--pct-full);
+}
+
+.remember-forgot {
+  font-size: var(--font-size-xs);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--remember-row-height);
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: var(--size-6);
+  white-space: nowrap;
+  margin: 0;
+}
+
+.remember span {
+  position: relative;
+  width: var(--size-14);
+  height: var(--size-14);
+  border-radius: var(--radius-control);
+  background: var(--checkbox-bg);
+  border: var(--border-width-thin) solid var(--color-border);
+}
+
+.remember span::after {
+  content: "";
+  position: absolute;
+  top: var(--size-3);
+  left: var(--size-2-5);
+  width: var(--size-6);
+  height: var(--size-3);
+  border-left: var(--size-2) solid var(--checkbox-check-color);
+  border-bottom: var(--size-2) solid var(--checkbox-check-color);
+  rotate: -45deg;
+}
+
+.forgot {
+  opacity: 0.5;
+  font-size: var(--font-size-sm);
+}

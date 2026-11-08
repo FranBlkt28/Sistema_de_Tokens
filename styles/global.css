@@ -1,0 +1,220 @@
+@import url(./tokens/_reset.css);
+@import url(./tokens/_primitives.css);
+@import url(./tokens/_spacing.css);
+@import url(./tokens/_radius.css);
+@import url(./tokens/_semantic.css);
+@import url(./tokens/_component.css);
+@import url(./fonts/_montserrat.css);
+
+*,
+*::before,
+*::after {
+    font-family: var(--font-family-strong);
+}
+
+/* One CSS per colour, borders, fonts, etc. - flat design */
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-block {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.main-block__link {
+    display: block;
+    line-height: 0;
+}
+
+.header-layout__logo img {
+    min-height: var(--size-89);
+    height: var(--size-89);
+    width: auto;
+    display: block;
+}
+
+.main-block__text {
+    flex: 0.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-body);
+    font-size: medium;
+}
+
+.main-block img {
+    height: var(--size-256);
+    width: var(--size-256);
+}
+
+/* NOTE: Block, Element, Modifier (BEM) Methodology */
+
+/* NOTE: Card */
+
+.card {
+    border-radius: var(--radius-surface);
+    border-color: var(--color-border);
+    border-width: var(--border-width-thin);
+}
+
+/* NOTE: Form Card */
+
+.form-card {
+    background-color: var(--form-card-bg);
+    border-radius: var(--form-card-radius);
+    color: var(--color-text);
+    width: var(--form-card-width);
+    padding: var(--space-5) var(--space-6);
+}
+
+.form-card__tittle {
+    font-size: var(--font-size-title);
+    text-align: center;
+}
+
+.form-card__checkbox {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-sm);
+    margin: var(--space-4) 0 var(--space-3);
+}
+
+.form-card__checkbox input[type="checkbox"] {
+    accent-color: var(--color-action-text);
+    margin-right: var(--space-1);
+}
+
+.form-card__checkbox a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.form-card__checkbox a:hover {
+    text-decoration: underline;
+}
+
+.form-card__button {
+    width: var(--pct-full);
+    height: var(--space-6);
+    background: var(--form-button-bg);
+    border: none;
+    outline: none;
+    box-shadow: var(--form-button-shadow);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    color: var(--form-button-text);
+    font-family: var(--font-family-strong);
+}
+
+.form-card__link {
+    font-size: var(--font-size-sm);
+    text-align: center;
+    margin-top: var(--space-4);
+}
+
+.form-card__link p a Link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: var(--font-weight-semibold);
+}
+
+.form-card__link p a:hover {
+    text-decoration: underline;
+}
+
+/* NOTE: Input Block */
+
+.input-block {
+    position: relative;
+    width: var(--pct-full);
+    height: var(--space-6);
+    margin: var(--space-5) 0;
+}
+
+.input-block__field {
+    width: var(--pct-full);
+    height: var(--pct-full);
+    background: var(--input-block-bg);
+    border: none;
+    outline: none;
+    border-radius: var(--input-block-radius);
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    padding: var(--space-4) var(--space-6) var(--space-4) var(--space-4);
+}
+
+.input-block__field::placeholder {
+    color: var(--color-text-muted);
+}
+
+.input-block__field:focus {
+    /* NOTE: A11y Accesibility */
+    outline: none;
+}
+
+.input-block__icon {
+    position: absolute;
+    right: var(--space-4);
+    top: var(--pct-half);
+    transform: translateY(-50%);
+    font-size: var(--font-size-body);
+    opacity: .6;
+}
+
+/* NOTE: Responsive for tablet */
+@media (max-width: 768px) {
+    .header-layout {
+        min-height: var(--size-72);
+    }
+
+    .main-block img {
+        height: 70dvw;
+        width: 70dvw;
+    }
+
+    .header-layout__logo {
+        padding: var(--space-2) var(--space-2) var(--space-2) var(--space-6);
+        letter-spacing: var(--letter-spacing-widest);
+    }
+
+    .header-layout__logo h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .header-layout {
+        min-height: var(--size-100);
+    }
+
+    .main-block img {
+        height: 70dvw;
+        width: 70dvw;
+    }
+
+    .header-layout__logo {
+        padding: var(--size-6) var(--space-3) var(--size-5) var(--space-5);
+        letter-spacing: var(--letter-spacing-wider);
+    }
+
+    .header-layout__logo h1 {
+        font-size: 1.75rem;
+    }
+}

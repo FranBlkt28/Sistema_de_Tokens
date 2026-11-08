@@ -1,0 +1,108 @@
+/* NOTE: Capa 2 - Semanticos (Semantic / Alias / System)
+   Cada token declara una intencion y apunta a la capa 1.
+   Cambiar este archivo cambia el tema. */
+
+@layer base {
+  :root {
+
+    /* Color - superficies */
+
+    --color-bg: var(--color-gray-100);
+    --color-surface: var(--color-gray-200);
+    --color-surface-raised: var(--color-white);
+    --color-surface-subtle: var(--color-gray-50);
+    --color-surface-input: var(--color-gray-150);
+    --color-surface-inverse: var(--color-gray-950);
+    --color-surface-translucent: var(--color-white-a04);
+
+    /* Color - texto */
+
+    --color-text: var(--color-gray-900);
+    --color-text-muted: var(--color-gray-500);
+    --color-text-on-inverse: var(--color-cream);
+    --color-accent-text: var(--color-gray-50);
+
+    /* Color - borde, accion, acento */
+
+    --color-border: var(--color-black-a10);
+    --color-action: var(--color-gray-900);
+    --color-action-text: var(--color-gray-50);
+    --color-accent: var(--color-blue-500);
+    --color-accent-active: var(--color-blue-500-a10);
+
+    /* Color - efectos */
+
+    --color-sheen: var(--color-white-a45);
+    --color-overlay: var(--color-black-a40);
+
+    /* Radio */
+
+    --radius-card: var(--radius-none);
+    --radius-surface: var(--radius-sm);
+    --radius-control: var(--radius-none);
+    --radius-pill: var(--radius-full);
+
+    /* Espaciado - roles del login */
+
+    --spacing-hero-gap: var(--space-4);
+    --spacing-hero-px: var(--space-6);
+    --spacing-hero-text-mb: var(--size-6);
+    --spacing-hero-label-py: var(--space-3);
+    --spacing-hero-label-px: var(--space-8);
+    --spacing-form-gap: var(--space-4);
+    --spacing-form-p: var(--space-7);
+    --spacing-form-title-mb: var(--space-3);
+    --spacing-fields-gap: var(--space-3);
+
+    /* Dimensiones - controles */
+
+    --control-height: var(--size-46);
+    --control-padding-y: var(--size-14);
+    --control-padding-x: var(--space-3);
+    --border-width-thin: var(--size-1);
+
+    /* Tipografia */
+
+    --font-family-body: var(--font-regular);
+    --font-family-strong: var(--font-extrabold);
+    --font-size-xs: var(--text-10);
+    --font-size-sm: var(--text-12);
+    --font-size-caption: var(--text-13);
+    --font-size-nav: var(--text-14);
+    --font-size-md: var(--text-15);
+    --font-size-body: var(--text-16);
+    --font-size-title: var(--text-20);
+    --font-size-heading: var(--text-22);
+    --font-weight-medium: var(--weight-500);
+    --font-weight-semibold: var(--weight-600);
+    --letter-spacing-wide: var(--tracking-wide);
+    --letter-spacing-wider: var(--tracking-wider);
+    --letter-spacing-widest: var(--tracking-widest);
+    --line-height-hero: var(--leading-hero);
+
+    /* Sombra */
+
+    --shadow-card: var(--shadow-card-raw);
+    --shadow-float: var(--shadow-float-raw);
+    --shadow-glow: var(--shadow-glow-raw);
+  }
+
+  /* NOTE: Tema oscuro - solo se redefine esta capa */
+
+  :root[data-theme="dark"] {
+    --color-bg: var(--color-gray-950);
+    --color-surface: var(--color-gray-900);
+    --color-surface-raised: var(--color-gray-850);
+    --color-surface-subtle: var(--color-gray-950);
+    --color-surface-input: var(--color-gray-900);
+    --color-text: var(--color-gray-50);
+    --color-accent-text: var(--color-white);
+    --color-border: var(--color-white-a10);
+    --color-action: var(--color-blue-500);
+    --color-action-text: var(--color-white);
+    --color-accent-active: var(--color-blue-500-a18);
+    --color-sheen: var(--color-white-a04);
+    --shadow-card: var(--shadow-none);
+    --shadow-float: var(--shadow-none);
+  }
+}

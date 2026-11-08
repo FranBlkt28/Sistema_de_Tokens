@@ -1,0 +1,20 @@
+.app-shell {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.app-body {
+    display: flex;
+    flex: 1;              /* ocupa el alto restante tras el header */
+    min-height: 0;        /* CRÍTICO: permite que los hijos encojan */
+    overflow: hidden;
+}
+
+.app-main {
+    flex: 1;
+    min-width: 0;         /* CRÍTICO: permite que el hijo encoja */
+    min-height: 0;        /* CRÍTICO: permite scroll interno de Monaco */
+    display: flex;
+    overflow: hidden;
+}
